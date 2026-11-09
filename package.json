@@ -1,0 +1,11 @@
+{
+  "name": "khatabanao",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mobile-first local customer credit and payment ledger. GitHub Pages ready.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

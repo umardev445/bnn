@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#174d3b">
+  <meta name="description" content="KhataBanao – simple customer udhaar ledger, payment tracking, balances and local backup for small shops.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self'; manifest-src 'self'">
+  <meta name="referrer" content="no-referrer">
+  <title>KhataBanao — Your customer ledger, beautifully organised</title>
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./assets/base.css">
+  <link rel="stylesheet" href="./assets/khata.css">
+  <script type="module" src="./assets/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app"><div class="loading">KhataBanao<span>Opening your customer ledger…</span></div></div>
+  <noscript><div class="fatal"><h1>JavaScript required</h1><p>Please enable JavaScript to use your local customer ledger.</p><a href="./privacy.html">Privacy policy</a></div></noscript>
+  <dialog id="editor" class="small-dialog" aria-label="Edit record"></dialog>
+  <dialog id="confirm" class="small-dialog" aria-label="Confirm action"></dialog>
+  <input id="backup-input" type="file" accept=".json,application/json" hidden>
+  <div id="toasts" role="status" aria-live="polite"></div>
+  <div id="print-root" aria-hidden="true"></div>
+</body>
+</html>

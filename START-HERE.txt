@@ -1,0 +1,16 @@
+KHATABANAO — SECOND APP (SAME BILLBANAO DESIGN)
+
+1. ZIP unzip karein; khatabanao folder kholein.
+2. Folder ke andar ki SAARI files NEW GitHub repository ke root mein upload karein.
+3. assets/config.js mein asli developer name aur public support email bhar dein.
+4. GitHub repo -> Settings -> Pages -> main -> /(root) -> Save.
+5. Naya HTTPS URL khol kar Add customer se shuru karein.
+6. Udhaar diya / Payment received add karein. Settings se backup zaroor lein.
+
+NAYA IDEA: KhataBanao — customer udhaar, payments and balances.
+
+IMPORTANT: Ye WEBSITE/PWA code hai, Android APK ya Android Studio project nahi.
+Android shell ke liye ANDROID-NOTES.md zaroor parhein.
+Google Play ke liye separate package ID suggest: com.khatabanao.app
+
+TEST: npm test && npm run check

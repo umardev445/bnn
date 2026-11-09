@@ -1,0 +1,13 @@
+import {readFileSync,existsSync} from 'node:fs';
+import {resolve} from 'node:path';
+const root=resolve(import.meta.dirname,'..');
+const requireFile=p=>{if(!existsSync(resolve(root,p)))throw new Error(`Missing ${p}`);};
+const files=['index.html','assets/app.mjs','assets/core.mjs','assets/store.mjs','assets/config.js','assets/i18n.mjs','assets/icons.mjs','assets/base.css','assets/khata.css','assets/icon.svg','assets/icon-192.png','assets/icon-512.png','manifest.webmanifest','sw.js','privacy.html','terms.html','help.html','contact.html','about.html','delete-data.html'];
+files.forEach(requireFile);
+const sw=readFileSync(resolve(root,'sw.js'),'utf8');
+for(const f of files)if(!sw.includes(`'./${f}'`))throw new Error(`Not precached: ${f}`);
+const html=readFileSync(resolve(root,'index.html'),'utf8');
+for(const f of ['assets/app.mjs','assets/base.css','assets/khata.css','assets/icon.svg','manifest.webmanifest']) if(!html.includes(`./${f}`))throw new Error(`Missing HTML reference: ${f}`);
+const manifest=JSON.parse(readFileSync(resolve(root,'manifest.webmanifest'),'utf8'));
+if(manifest.icons.length!==2)throw new Error('Expected 192 and 512 icons');
+console.log(`Verified ${files.length} assets, PWA cache, and manifest.`);

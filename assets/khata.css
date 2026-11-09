@@ -1,0 +1,57 @@
+/* KhataBanao additions over the original BillBanao design tokens and layout. */
+.hero .hero-copy{max-width:690px}.hero .hero-copy p{max-width:355px}
+.currency-chip{font-weight:700;font-size:11px;border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:6px 12px;color:var(--green)}
+.ledger-list{display:flex;flex-direction:column}
+.ledger-row{display:flex;gap:14px;align-items:center;padding:16px 20px;border-top:1px solid var(--line);min-width:0}
+.ledger-row:first-child{border-top:0}
+.entry-mark{height:41px;width:41px;display:grid;place-items:center;border-radius:13px;flex-shrink:0}
+.entry-mark.debit{color:#a97c30;background:#fbf3e5}.entry-mark.credit{color:#4d895b;background:#e7f3e7}
+.ledger-descr{min-width:0;flex:1;line-height:1.45}.ledger-descr strong{font-size:13px;font-weight:700;overflow-wrap:anywhere}
+.record-link{color:var(--ink);text-decoration:none}.record-link:hover{text-decoration:underline;color:var(--green)}
+.ledger-meta{font-size:11px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere;max-width:460px}
+.ledger-value{text-align:end;min-width:115px}.ledger-value strong{font-size:13px;display:block;white-space:nowrap}.ledger-value span{color:var(--muted);font-size:10px}
+.debit-text{color:#a17427}.credit-text{color:#39734b}.ledger-buttons{display:flex;gap:2px;margin-inline-start:8px}
+.balance-pill{display:inline-flex;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:750;font-variant-numeric:tabular-nums;max-width:100%;overflow-wrap:anywhere}
+.balance-pill.pending{color:#aa7827;background:#faf1de}.balance-pill.settled{color:#4b805d;background:#e6f2e6}.balance-pill.advance{color:#357c8b;background:#e8f5f5}
+.customer-amount{margin-top:17px}.client-card .card-foot{gap:10px;flex-wrap:wrap}.client-card .text-link{font-size:10px}.client-card h3 a:hover{color:var(--green)}
+.heading-actions{display:flex;gap:10px;flex-wrap:wrap}.small-link{display:inline-block;font-size:11px;color:var(--muted);margin-bottom:17px}.small-link:hover{color:var(--green)}
+.debt-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.top-debtors{margin-top:29px}
+.debt-card{border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:15px;display:flex;align-items:center;gap:11px;min-width:0;transition:transform .14s,border-color .14s}
+.debt-card:hover{transform:translateY(-2px);border-color:#a9bda7}
+.debt-card>span:nth-child(2){display:flex;flex-direction:column;flex:1;min-width:0;gap:5px}
+.debt-card strong{font-size:12px;overflow-wrap:anywhere}.debt-card small{font-size:11px;color:#9c7232;overflow-wrap:anywhere}.debt-card .icon{width:16px;color:#aab4a7}
+.full{grid-column:1/-1}.small-dialog form{display:block}.small-dialog .modal-body{padding:25px}.small-dialog .modal-foot{gap:8px}.small-dialog .modal-foot button:last-child{min-width:110px}
+.settings-grid .form-grid{margin-top:18px}.field textarea,.field input,.field select{width:100%}
+.mini-card h2{font-size:18px}.data-actions .btn{width:100%}.stat-amount{white-space:normal;overflow-wrap:anywhere;overflow-x:visible}
+.editor-dialog .field,.small-dialog .field{margin:0}.field input[type=number]{font-variant-numeric:tabular-nums}
+.small-dialog input:focus,.small-dialog select:focus,.small-dialog textarea:focus{outline:2px solid #91ba72;outline-offset:1px}
+.empty .btn{margin-top:15px}.text-link svg{margin-inline-start:6px}
+html[dir=rtl] .hero-art{inset-inline-end:50px;transform:rotate(-7deg)}html[dir=rtl] .ledger-value{text-align:start}
+html[data-theme=dark] .balance-pill.pending{background:#4f412b;color:#eed39a}
+html[data-theme=dark] .balance-pill.settled{background:#2e4b36;color:#add6ac}
+html[data-theme=dark] .balance-pill.advance{background:#23494d;color:#a6d9de}
+html[data-theme=dark] .entry-mark.debit{background:#4d3f2c;color:#edc686}
+html[data-theme=dark] .entry-mark.credit{background:#2e4837;color:#b2d3b3}
+html[data-theme=dark] .debt-card small{color:#edd09a}
+#toasts .toast.error{background:#9d3e36;border-color:#b95851;color:#fff}
+#print-root{display:none}
+.statement{font-family:Arial,"Noto Sans Arabic",sans-serif;color:#172f22;font-size:12px}
+.statement header{border-bottom:3px solid #174d3b;padding-bottom:18px}
+.statement header h1{font-size:30px}.statement header p{margin-top:5px;color:#63796a}
+.statement-info{display:flex;justify-content:space-between;gap:15px;margin:25px 0}.statement-info strong{font-size:18px}.statement-info p{margin-top:6px}
+.statement table{border-collapse:collapse;width:100%;font-size:11px}
+.statement th{background:#174d3b;color:#fff}.statement th,.statement td{border-bottom:1px solid #e2e7e1;padding:11px 8px;text-align:start}
+.statement-summary{text-align:end;font-size:18px;margin-top:22px}.statement-footer{margin-top:38px;color:#849487;font-size:10px}
+@media(max-width:1100px){.debt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.debt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ledger-row{padding:15px 13px;gap:9px;flex-wrap:wrap}.ledger-descr{flex:1;min-width:120px}.ledger-value{min-width:112px;margin-inline-start:auto}.ledger-buttons{width:100%;justify-content:flex-end;margin-inline-start:0;border-top:1px dotted var(--line);padding-top:5px}.entry-mark{height:35px;width:35px}.ledger-meta{font-size:10px}.ledger-value strong{font-size:12px}.heading-actions{width:100%}.heading-actions .btn{flex:1}.small-dialog .modal-body{padding:22px 18px}.stat-amount{font-size:17px}.top-debtors{margin-top:24px}}
+@media(max-width:370px){.debt-grid{grid-template-columns:1fr}.ledger-value strong{font-size:11px}}
+@media print{
+ @page{size:A4;margin:17mm}
+ html,body{background:white!important;color:black!important}
+ body>*{display:none!important}
+ body>#print-root{display:block!important;position:static!important}
+ #print-root .statement{display:block!important}
+ .statement table thead{display:table-header-group}
+ .statement tr{break-inside:avoid}
+ .statement th{background:#174d3b!important;color:white!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
